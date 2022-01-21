@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JPp-X9-GOB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editor View Controller-->
+        <scene sceneID="AJT-SW-h4u">
+            <objects>
+                <viewController id="JPp-X9-GOB" customClass="EditorViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lJ2-1h-lRt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtm-Tz-VHg">
+                                <rect key="frame" x="40" y="84" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-a5-F1K">
+                                <rect key="frame" x="40" y="125" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLP-Va-ZGM">
+                                <rect key="frame" x="40" y="179" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgE-4v-uJv">
+                                <rect key="frame" x="40" y="722" width="334" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Si3-Gn-vyY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButton:" destination="JPp-X9-GOB" eventType="touchUpInside" id="R9x-ux-cQo"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFR-Dv-dkg">
+                                <rect key="frame" x="40" y="220" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYu-n0-nWr">
+                                <rect key="frame" x="20" y="782" width="354" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ThG-v2-0t9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="削除">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButton:" destination="JPp-X9-GOB" eventType="touchUpInside" id="1Jo-kD-fcf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ioB-P1-FgB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ioB-P1-FgB" firstAttribute="trailing" secondItem="sFR-Dv-dkg" secondAttribute="trailing" constant="40" id="2EA-Pp-z3l"/>
+                            <constraint firstItem="sFR-Dv-dkg" firstAttribute="leading" secondItem="mtm-Tz-VHg" secondAttribute="leading" id="31t-FX-MVr"/>
+                            <constraint firstItem="ioB-P1-FgB" firstAttribute="trailing" secondItem="KgE-4v-uJv" secondAttribute="trailing" constant="40" id="58t-Y6-du0"/>
+                            <constraint firstItem="mtm-Tz-VHg" firstAttribute="top" secondItem="ioB-P1-FgB" secondAttribute="top" constant="40" id="5rV-r2-EKm"/>
+                            <constraint firstItem="Qqu-a5-F1K" firstAttribute="top" secondItem="mtm-Tz-VHg" secondAttribute="bottom" constant="20" id="7rL-kU-i3d"/>
+                            <constraint firstItem="Qqu-a5-F1K" firstAttribute="leading" secondItem="mtm-Tz-VHg" secondAttribute="leading" id="KRi-y4-EiT"/>
+                            <constraint firstItem="sFR-Dv-dkg" firstAttribute="top" secondItem="fLP-Va-ZGM" secondAttribute="bottom" constant="20" id="KzM-RI-9ei"/>
+                            <constraint firstItem="ioB-P1-FgB" firstAttribute="trailing" secondItem="VYu-n0-nWr" secondAttribute="trailing" constant="40" id="La0-6f-vjO"/>
+                            <constraint firstItem="KgE-4v-uJv" firstAttribute="leading" secondItem="ioB-P1-FgB" secondAttribute="leading" constant="40" id="MS1-pU-nG2"/>
+                            <constraint firstItem="fLP-Va-ZGM" firstAttribute="leading" secondItem="mtm-Tz-VHg" secondAttribute="leading" id="SxE-VF-aJy"/>
+                            <constraint firstItem="ioB-P1-FgB" firstAttribute="bottom" secondItem="KgE-4v-uJv" secondAttribute="bottom" constant="100" id="XhA-O2-KAY"/>
+                            <constraint firstItem="VYu-n0-nWr" firstAttribute="top" secondItem="KgE-4v-uJv" secondAttribute="bottom" constant="20" id="YoB-Gc-98P"/>
+                            <constraint firstItem="VYu-n0-nWr" firstAttribute="leading" secondItem="ioB-P1-FgB" secondAttribute="leading" constant="20" id="cwp-um-B3h"/>
+                            <constraint firstItem="mtm-Tz-VHg" firstAttribute="leading" secondItem="ioB-P1-FgB" secondAttribute="leading" constant="40" id="et6-b0-zik"/>
+                            <constraint firstItem="fLP-Va-ZGM" firstAttribute="top" secondItem="Qqu-a5-F1K" secondAttribute="bottom" constant="20" id="hdp-o0-i6H"/>
+                            <constraint firstItem="ioB-P1-FgB" firstAttribute="trailing" secondItem="Qqu-a5-F1K" secondAttribute="trailing" constant="40" id="wiI-Ez-KVo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputDateTextField" destination="Qqu-a5-F1K" id="6xy-zC-W4l"/>
+                        <outlet property="inputWeightTextField" destination="sFR-Dv-dkg" id="L94-ax-0Et"/>
+                        <outlet property="saveButton" destination="KgE-4v-uJv" id="4py-IS-XF6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjh-GL-9QA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.55072463768118" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
